@@ -876,7 +876,7 @@ ABOUT ( counters )
 -------------------------------------------------------------------*/
 
 .about-sec {
-	background:url(../images/about-bg.jpg) repeat center top;
+	background:url(../images/about-bg-sample.jpg) repeat center top;
 	background-attachment:fixed;
 	height: 530px;
 	padding: 110px 0 50px;
