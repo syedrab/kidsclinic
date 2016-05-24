@@ -5,7 +5,7 @@
             function init() {}
 			
 			
-			var myLatlng = new google.maps.LatLng(-37.8173306,144.9556518); // Change map location here
+			var myLatlng = new google.maps.LatLng(43.8823952, -79.0182807); // Change map location here
 
 
 
@@ -150,10 +150,10 @@
 				  var contentString = '<div id="content-map">'+
 				  '<div id="siteNotice">'+
 				  '</div>'+
-				  '<h5 id="firstHeading" class="firstHeading">Envato</h5>'+
-				  '<div id="bodyContent">King Street, Melbourne, Victoria, Australia'+
-				  '<p>Tel: +912 123456789,' +
-				  '<br>Fax: +912 123456789 '+				  
+				  '<h5 id="firstHeading" class="firstHeading">Kids Clinic</h5>'+
+				  '<div id="bodyContent">300 Rossland Road E, Suite 301 in Ajax, Ontario'+
+				  '<p>Tel: 905-683-4440,' +
+				  '<br>Fax: 905-683-3303 '+				  
 				  ' </p>'+				  
 				  '</div>'+
 				  '</div>';
