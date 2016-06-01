@@ -113,7 +113,7 @@
 					fullscreen    : 1
 				},
 				type : 'iframe',
-				url  : '//player.vimeo.com/video/$1'
+				url  : 'http://player.vimeo.com/video/$1'
 			},
 			metacafe : {
 				matcher : /metacafe.com\/(?:watch|fplayer)\/([\w\-]{1,10})/,
