@@ -55,7 +55,7 @@
 					/* ------------------------------------------------------------------------ 
 					   TESTIMONIALS CAROUSEL
 					------------------------------------------------------------------------ */
-					jQuery("#carousel-testimonials, #meet-doctors-carousel, #main-banner, #carousel-testimonials2, .image-carousel").owlCarousel({
+					jQuery("#carousel-testimonials, #meet-doctors-carousel, #carousel-testimonials2, .image-carousel").owlCarousel({
 						singleItem : true,
 						pagination : true
 					});

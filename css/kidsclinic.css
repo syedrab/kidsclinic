@@ -585,6 +585,7 @@ HEADER
 }
 .fixed-header .main-banner {
 	top:84px;
+    position: relative;
 }
 .fixed-header.small-header .kidsclinic-header {
 	min-height: 50px;
@@ -1052,12 +1053,15 @@ SERVICES BOX
 	font-size: 38px;
 	line-height: 80px;
 }
+.service-box div {
+	color: #4c4c4c;
+}
 .service-box:hover {
 	color:#fff;
 	-webkit-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
-.service-box:hover h4, .service-box:hover h4 a {
+.service-box:hover h4, .service-box:hover h4 a, .service-box:hover div {
 	color:#fff
 }
 
