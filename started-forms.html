@@ -242,12 +242,12 @@
                         <div class="col-md-12">
                             <div class="appointment-form clearfix" style="padding:0px">
                                 <div class="success" id="message-app" style="display:none;"></div>
-                                <form name="appoint_form" id="appoint_form" method="post" action="submit.php" onSubmit="return false">
+                                <form name="appoint_form" id="appoint_form" method="post" action="submit.php" onSubmit="return false" enctype="multipart/form-data">
                                     <input type="text" name="app_fname" id="app_fname" placeholder="First Name" onKeyPress="removeChecks();">
                                     <input type="text" name="app_lname" id="app_lname" placeholder="Last Name" onKeyPress="removeChecks();">
                                     <input type="email" name="app_email_address" id="app_email_address" placeholder="Email Address" onKeyPress="removeChecks();">
                                     <input type="text" name="app_phone" id="app_phone" placeholder="Phone No">
-                                    <input type="file" style="width:97%" />
+                                    <input type="file" name="uploaded_file" id="upload_file" style="width:97%" />
                                     <textarea placeholder="Message" name="app_msg" id="app_msg"></textarea>
                                     <input type="submit" value="submit" class="btn btn-default btn-rounded" onClick="validateAppoint();">
                                 </form>

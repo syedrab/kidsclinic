@@ -3934,7 +3934,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
     }
 }
 .navbar-collapse {
-    padding-left: 15px;
     overflow-x: visible;
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -4029,15 +4028,15 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
     float: left;
-    margin: 20px 0 0;
+    margin: 10px 0 0;
     font-size: 18px;
     line-height: 20px;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 .navbar-brand img {
-    width: 200px
-}
+    width: 245px;
+}	
 .navbar-brand:hover,
 .navbar-brand:focus {
     text-decoration: none;
@@ -6901,6 +6900,7 @@ td.hidden-lg {
     .home-box p,
     .kidsclinic-feature-list li {
         font-size: 14px;
+        margin: 0;
     }
     .testimonials p br {
         display: none;
