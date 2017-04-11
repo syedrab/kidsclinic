@@ -1,7 +1,7 @@
 <?php
 if($_POST['news_name']){
 	
-			$to = "syed.rab@gmail.com";
+			$to = "zain.uwaterloo@gmail.com";
 		$from =  $_POST["news_email_address"];
 		$message = "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Name: </strong>".$_POST["news_name"]."<br />";
 		$message .= "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Email Address: </strong>".$_POST["news_email_address"]."<br />";
@@ -25,7 +25,7 @@ else
 }
 
 if($_POST['app_fname']){
-			$to = "syed.rab@gmail.com";
+			$to = "zain.uwaterloo@gmail.com";
 		$from =  $_POST["app_email_address"];
 		$message = "&nbsp;&nbsp;&nbsp;&nbsp;<strong>First Name: </strong>".$_POST["app_fname"]."<br />";
 		$message .= "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Last Name: </strong>".$_POST["app_lname"]."<br />";
