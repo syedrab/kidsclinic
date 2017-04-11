@@ -1,7 +1,7 @@
 <?php
 if($_POST['news_name']){
 	
-			$to = "test@test.com";
+			$to = "syed.rab@gmail.com";
 		$from =  $_POST["news_email_address"];
 		$message = "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Name: </strong>".$_POST["news_name"]."<br />";
 		$message .= "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Email Address: </strong>".$_POST["news_email_address"]."<br />";
@@ -24,12 +24,39 @@ else
 	}
 }
 
+if($_POST['app_fname']){
+			$to = "syed.rab@gmail.com";
+		$from =  $_POST["app_email_address"];
+		$message = "&nbsp;&nbsp;&nbsp;&nbsp;<strong>First Name: </strong>".$_POST["app_fname"]."<br />";
+		$message .= "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Last Name: </strong>".$_POST["app_lname"]."<br />";
+		$message .= "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Email Address: </strong>".$_POST["app_email_address"]."<br />";
+		$message .= "&nbsp;&nbsp;&nbsp;&nbsp; <strong>Phone No: </strong>".$_POST["app_phone"]."<br />";
+		$message .= "&nbsp;&nbsp;&nbsp;&nbsp; <strong>Message: </strong>".$_POST["app_msg"]."<br />";
+		//$message->addAttachment($path_of_uploaded_file);
+		$subject = "CONTACT-US Kidsclinic - ".$_POST["app_fname"]." ".$_POST["app_lname"];		
+		$headers = "From: ".$_POST["app_email_address"]."\n";
+		$headers .= "MIME-Version: 1.0" . "\r\n";
+		$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
+		
+	    $send =	mail($to,$subject,$message,$headers);
 
+
+
+if($send)
+{
+	echo "success";
+}
+else
+{
+	echo "error";
+}
+}
+/*
 
 if($_POST['fname']){
-			$to = "test@test.com";
+			$to = "syed.rab@gmail.com";
 		$from =  $_POST["email_address"];
-		$message = "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Name: </strong>".$_POST["fname"]."<br />";
+		$message = "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Names: </strong>".$_POST["fname"]."<br />";
 		$message .= "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Email Address: </strong>".$_POST["email_address"]."<br />";
 		$message .= "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Subject: </strong>".$_POST["subject"]."<br />";
 		$message .= "&nbsp;&nbsp;&nbsp;&nbsp; <strong>Message: </strong>".$_POST["msg"]."<br />";
@@ -52,34 +79,8 @@ else
 	}
 }
 
+*/
 
-if($_POST['app_fname']){
-			$to = "kidsclinictest@gmail.com";
-		$from =  $_POST["app_email_address"];
-		$message = "&nbsp;&nbsp;&nbsp;&nbsp;<strong>First Name: </strong>".$_POST["app_fname"]."<br />";
-		$message .= "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Last Name: </strong>".$_POST["app_lname"]."<br />";
-		$message .= "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Email Address: </strong>".$_POST["app_email_address"]."<br />";
-		$message .= "&nbsp;&nbsp;&nbsp;&nbsp; <strong>Phone No: </strong>".$_POST["app_phone"]."<br />";
-		$message .= "&nbsp;&nbsp;&nbsp;&nbsp; <strong>Message: </strong>".$_POST["app_msg"]."<br />";
-		$message->addAttachment($path_of_uploaded_file);
-		$subject = 'CONTACT-US';		
-		$headers = "From: ".$_POST["app_email_address"]."\n";
-		$headers .= "MIME-Version: 1.0" . "\r\n";
-		$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
-		
-	    $send =	mail($to,$subject,$message,$headers);
-
-
-
-if($send)
-{
-	echo "success";
-}
-else
-{
-	echo "error";
-	}
-}
 
 
 
