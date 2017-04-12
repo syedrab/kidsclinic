@@ -27,13 +27,14 @@ else
 if($_POST['app_fname']){
 			$to = "zain.uwaterloo@gmail.com";
 		$from =  $_POST["app_email_address"];
-		$message = "&nbsp;&nbsp;&nbsp;&nbsp;<strong>First Name: </strong>".$_POST["app_fname"]."<br />";
-		$message .= "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Last Name: </strong>".$_POST["app_lname"]."<br />";
-		$message .= "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Email Address: </strong>".$_POST["app_email_address"]."<br />";
-		$message .= "&nbsp;&nbsp;&nbsp;&nbsp; <strong>Phone No: </strong>".$_POST["app_phone"]."<br />";
-		$message .= "&nbsp;&nbsp;&nbsp;&nbsp; <strong>Message: </strong>".$_POST["app_msg"]."<br />";
+		$message .= "<br />";
+		$message .= "<strong>First Name: </strong>".$_POST["app_fname"]."<br />";
+		$message .= "<strong>Last Name: </strong>".$_POST["app_lname"]."<br />";
+		$message .= "<strong>Email Address: </strong>".$_POST["app_email_address"]."<br />";
+		$message .= "<strong>Phone No: </strong>".$_POST["app_phone"]."<br />";
+		$message .= "<strong>Message: </strong>".$_POST["app_msg"]."<br />";
 		//$message->addAttachment($path_of_uploaded_file);
-		$subject = "CONTACT-US Kidsclinic - ".$_POST["app_fname"]." ".$_POST["app_lname"];		
+		$subject = "CONTACT-US - ".$_POST["app_fname"]." ".$_POST["app_lname"];		
 		$headers = "From: ".$_POST["app_email_address"]."\n";
 		$headers .= "MIME-Version: 1.0" . "\r\n";
 		$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
