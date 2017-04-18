@@ -3,7 +3,7 @@
 
 	function removeChecks(){
 	
-	var app_fname = document.getElementById("app_fname");
+	/*var app_fname = document.getElementById("app_fname");
 	var app_lname = document.getElementById("app_lname");
 
 	var app_email_address = document.getElementById("app_email_address");
@@ -37,7 +37,7 @@
 	//}
 	
 	
-	
+	*/
 	}
 
 
@@ -90,33 +90,73 @@
 	
 		if(flag == 0)
 		{	
-			
 			$.ajax({
-							type: "POST",
-							url: "submit.php",
-							data: $("#appoint_form").serialize(),
-							success: function(msg)
-							{
-								//alert(msg);
-								if(msg == 'success'){
-								
-								$('#message-app').fadeIn(2000);
-								document.getElementById("message-app").innerHTML = "Thank You! We'll contact you shortly";
-								return true;
-								}else{
-								
-								
-								$('#message-app').fadeIn(2000);
-								document.getElementById("message-app").innerHTML = "Thanks for contacting us.";
-								return true;
-								}
-							}
-						});
+				type: "POST",
+				url: "submit.php",
+				data: $("#appoint_form").serialize(),
+				success: function(msg)
+				{
+					//alert(msg);
+					if(msg == 'success'){
+						$('#message-app').fadeIn(2000);
+						document.getElementById("message-app").innerHTML = "Thank You! We'll contact you shortly";
+						return true;
+					}else{								
+						$('#message-app').fadeIn(2000);
+						document.getElementById("message-app").innerHTML = "Thanks for contacting us.";
+						return true;
+					}
+				}
+			});
 			
 		}
 	}
+
+	function validateHomeNewsletter(){
+		var news_name = document.getElementById("home_news_name");
+		var news_email_address = document.getElementById("home_news_email_address");
 	
-	/*function validateNewsletter(){
+		var flag = 0;
+		
+		if(news_name.value == "" )
+		{
+			news_name.style.borderColor = "#FE847B";
+			flag = 1;
+		}
+		else if(news_email_address.value=="")
+		{
+			news_email_address.style.borderColor = "#FE847B";
+			flag = 1;
+		}
+		else if(checkcontact(news_email_address.value)==false)
+		{
+			news_email_address.style.borderColor = "#FE847B";
+			flag = 1;
+		}	
+		
+		if(flag == 0)
+		{	
+			$.ajax({
+				type: "POST",
+				url: "submit.php",
+				data: $("#home_newsletter_form").serialize(),
+				success: function(msg)
+				{
+					if(msg == 'success'){
+						$('#home_message-news').fadeIn(2000);
+						document.getElementById("home_message-news").innerHTML = "Thank You! You've subscribed successfully.";
+						return true;
+					}else{								
+						$('#home_message-news').fadeIn(2000);
+						document.getElementById("home_message-news").innerHTML = "Thank You! You've subscribed.";
+						return true;
+					}
+				}
+			});						
+		}
+	}
+	
+	function validateNewsletter(){
 		var news_name = document.getElementById("news_name");
 		var news_email_address = document.getElementById("news_email_address");
 	
@@ -140,34 +180,26 @@
 		
 		if(flag == 0)
 		{	
-			
-			
-			
 			$.ajax({
-							type: "POST",
-							url: "submit.php",
-							data: $("#newsletter_form").serialize(),
-							success: function(msg)
-							{
-								//alert(msg);
-								if(msg == 'success'){
-								$('#newsletter_form').fadeOut(500);
-								$('#message-news').fadeIn(2000);
-								document.getElementById("message-news").innerHTML = "Thank You! You've subscribed successfully.";
-								return true;
-								}else{
-								
-								$('#newsletter_form').fadeOut(500);
-								$('#message-news').fadeIn(2000);
-								document.getElementById("message-news").innerHTML = "Thank You! You've subscribed successfully.";
-								return true;
-								}
-							}
-						});
-						
+				type: "POST",
+				url: "submit.php",
+				data: $("#newsletter_form").serialize(),
+				success: function(msg)
+				{
+					if(msg == 'success'){
+						$('#message-news').fadeIn(2000);
+						document.getElementById("message-news").innerHTML = "Thank You! You've subscribed successfully.";
+						return true;
+					}else{								
+						$('#message-news').fadeIn(2000);
+						document.getElementById("message-news").innerHTML = "Thank You! You've subscribed.";
+						return true;
+					}
+				}
+			});						
 		}
-}
-
+	}
+/*
 
 	///////////////////////////////////////// Contact us form //////////////////////////////////////////
 

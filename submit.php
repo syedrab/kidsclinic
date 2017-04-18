@@ -1,6 +1,5 @@
 <?php
 if($_POST['news_name']){
-	
 			$to = "zain.uwaterloo@gmail.com";
 		$from =  $_POST["news_email_address"];
 		$message = "&nbsp;&nbsp;&nbsp;&nbsp;<strong>Name: </strong>".$_POST["news_name"]."<br />";
